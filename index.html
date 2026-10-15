@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#190d17">
+<title>خليني في حضنك يا حبيبي ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;background:#190d17;color:#fff;
+  font-family:Tahoma,Arial,sans-serif;text-align:center
+}
+.hero{
+  min-height:75vh;padding:45px 18px;
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;
+  background:radial-gradient(ellipse at top,#713354,#321629 55%,#190d17)
+}
+.heart{font-size:55px;animation:pulse 1.5s infinite}
+h1{color:#f3b7cd;font-size:29px;line-height:1.8}
+p{line-height:2}
+.intro{max-width:350px;color:#f8dce8}
+button{
+  border:0;border-radius:30px;padding:14px 25px;
+  background:#f3b7cd;color:#351327;
+  font-size:16px;font-weight:bold;cursor:pointer
+}
+section{padding:25px 14px 40px}
+h2{color:#f3b7cd}
+.gallery{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:12px;max-width:650px;margin:22px auto
+}
+.card{
+  overflow:hidden;border-radius:17px;
+  background:#2b1826;border:1px solid #70415a
+}
+.card img{
+  display:block;width:100%;height:235px;
+  object-fit:cover
+}
+.caption{padding:12px 5px;color:#f8dce8}
+.letter{
+  max-width:500px;margin:28px auto;padding:22px;
+  background:#2b1826;border:1px solid #70415a;
+  border-radius:20px;line-height:2.3;color:#ffe4ee
+}
+footer{padding:25px;color:#c9a2b5}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.14)}
+}
+@media(max-width:380px){
+  .card img{height:185px}
+  h1{font-size:25px}
+}
+</style>
+</head>
+
+<body>
+<header class="hero">
+  <div class="heart">❤️</div>
+  <h1>خليني في حضنك يا حبيبي</h1>
+  <p class="intro">
+    وسط كل الناس، في شخص واحد وجوده بيخلّي الدنيا أحلى،
+    وذكرياته بتفضل عايشة جوانا مهما عدى الوقت. ❤️
+  </p>
+
+  <button id="musicButton">🎵 شغّل أغنيتنا</button>
+  <audio id="song" preload="none" loop
+    src="https://raw.githubusercontent.com/empiresilver39-afk/Song/refs/heads/main/Albumaty.Com_Tamer_Ashour_Khalini.mp3">
+  </audio>
+</header>
+
+<section>
+  <h2>حكايتنا في أربع صور ❤️</h2>
+  <p>كل صورة ليها حكاية، وكل حكاية ليها مكان في القلب.</p>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="https://i.ibb.co/qLJmvfBF/f60e009b-e1c9-4ae8-9b33-bafb5d671fac.jpg"
+           alt="الذكرى الأولى" loading="lazy">
+      <div class="caption">أول حكاية ❤️</div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.ibb.co/twgF8M7D/c0d1e8cb-9368-4568-96e3-c940a8ec0a37.jpg"
+           alt="الذكرى الثانية" loading="lazy">
+      <div class="caption">أحلى لحظة 🌹</div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.ibb.co/Sw9PF4nQ/0cc77f9d-c18b-49f8-b643-76d2593decbb.jpg"
+           alt="الذكرى الثالثة" loading="lazy">
+      <div class="caption">إنت الحكاية 💕</div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.ibb.co/YB60XGCq/af7becb8-24bb-40bc-9036-afb6201db773.jpg"
+           alt="الذكرى الرابعة" loading="lazy">
+      <div class="caption">ذكرى تفضل للأبد ❤️</div>
+    </div>
+  </div>
+
+  <div class="letter">
+    <div style="font-size:32px">💌</div>
+    <h2>من قلبي لقلبك</h2>
+    في ذكريات بنعيشها مرة، بس بنفضل نفتكرها ألف مرة.
+    وفي أشخاص بيكون وجودهم أجمل من أي كلام.
+    <br>
+    <strong style="color:#f3b7cd">
+      خليني في حضنك يا حبيبي ❤️
+    </strong>
+  </div>
+</section>
+
+<footer>ذكرى جميلة تفضل عايشة ❤️</footer>
+
+<script>
+const song = document.getElementById("song");
+const button = document.getElementById("musicButton");
+
+button.addEventListener("click", async () => {
+  if (song.paused) {
+    try {
+      await song.play();
+      button.textContent = "⏸ إيقاف الأغنية";
+    } catch (e) {
+      button.textContent = "تعذّر التشغيل، جرّب تاني";
+    }
+  } else {
+    song.pause();
+    button.textContent = "🎵 شغّل أغنيتنا";
+  }
+});
+</script>
+</body>
+</html>
